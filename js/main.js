@@ -68,8 +68,8 @@ const boats = [
     location: "Drage",
     marina: "Marina Drage",
     image: "images/pleiades.png",
-    description: "Ruime 47-voet Bavaria met 4 cabines en 3 badkamers. Zeilen vernieuwd in 2023. Teak cockpit, airco op walstroom.",
-    extras: ["4 cabines / 3 badkamers", "Zeilen vernieuwd 2023", "Teak cockpit", "Boegschroef", "Airco (walstroom)", "Zonnepanelen 2×180W", "Autopilot", "3 douches"],
+    description: "Ruime 47-voet Bavaria met 4 cabines en 3 natte cellen. Zeilen vernieuwd in 2023. Teak cockpit, airco op walstroom.",
+    extras: ["4 cabines / 3 natte cellen", "Zeilen vernieuwd 2023", "Teak cockpit", "Boegschroef", "Airco (walstroom)", "Zonnepanelen 2×180W", "Autopilot", "3 douches"],
     details: { motor: "Volvo 50 HP", fuel: "210 L", water: "360 L" }
   },
   {
@@ -353,7 +353,7 @@ function boatCard(boat) {
             <span class="spec-value">${boat.max_crew} pers.</span>
           </div>
           <div class="spec-item">
-            <span class="spec-label">Badkamers</span>
+            <span class="spec-label">Natte cellen</span>
             <span class="spec-value">${boat.bathrooms}</span>
           </div>
         </div>
