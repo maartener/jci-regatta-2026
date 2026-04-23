@@ -725,7 +725,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .boat-model {
   font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 14px;
+  margin-bottom: 4px;
+}
+.boat-marina {
+  font-size: 0.8rem;
+  color: var(--jci-gold);
+  margin-bottom: 12px;
+  opacity: 0.85;
 }
 .boat-specs {
   display: grid;

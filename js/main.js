@@ -27,7 +27,7 @@ const boats = [
     model: "Bavaria C38 (2024)",
     length_ft: 37,
     cabins: 3,
-    bathrooms: 1,
+    bathrooms: 2,
     max_crew: 8,
     price_week: 2239,
     year: 2024,
@@ -338,7 +338,8 @@ function boatCard(boat) {
       </div>
       <div class="boat-body">
         <div class="boat-name">${boat.name}</div>
-        <div class="boat-model">${boat.model} &bull; ${boat.marina}</div>
+        <div class="boat-model">${boat.model}</div>
+        <div class="boat-marina">&#128205; ${boat.marina}, ${boat.location}</div>
         <div class="boat-specs">
           <div class="spec-item">
             <span class="spec-label">Lengte</span>
