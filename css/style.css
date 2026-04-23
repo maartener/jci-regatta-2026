@@ -2377,7 +2377,17 @@ footer {
 
   /* ── Vluchten ── */
   .flights-columns { grid-template-columns: 1fr; }
-  .flight-card { padding: 16px; }
+  .flight-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+  .fc-left { flex-direction: row; align-items: center; gap: 10px; min-width: unset; }
+  .fc-right { min-width: unset; width: 100%; align-items: flex-start; }
+  .fc-note { text-align: left; max-width: 100%; }
+  .fc-actions { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+  .fc-btn { flex: 1; min-width: 100px; text-align: center; font-size: 0.78rem; padding: 8px 10px; }
+  .fc-live-price { font-size: 1rem; }
 
   /* ── Teams ── */
   .teams-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
