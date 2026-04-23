@@ -1,0 +1,53 @@
+{
+  "fetched_at": "2026-04-23T19:00:00",
+  "retour": {
+    "HV6695": {
+      "heen_flight":  "HV6695",
+      "heen_airline": "Transavia",
+      "heen_from":    "RTM",
+      "heen_to":      "ZAD",
+      "heen_dep":     "07:10",
+      "heen_arr":     "09:00",
+      "heen_date":    "29 aug 2026",
+      "terug_flight": "HV6694",
+      "terug_dep":    "09:40",
+      "terug_arr":    "11:40",
+      "terug_date":   "5 sep 2026",
+      "price_eur":    119,
+      "seats_left":   null,
+      "booking_url":  "https://www.transavia.com/nl-NL/vluchten/zoeken/#outbound/RTM/ZAD/20260829/1adults"
+    },
+    "KL1333": {
+      "heen_flight":  "KL1333",
+      "heen_airline": "KLM + Ryanair",
+      "heen_from":    "AMS",
+      "heen_to":      "ZAD",
+      "heen_dep":     "12:10",
+      "heen_arr":     "17:05",
+      "heen_date":    "29 aug 2026",
+      "terug_flight": "Croatia Airlines",
+      "terug_dep":    "07:00",
+      "terug_arr":    "10:30",
+      "terug_date":   "5 sep 2026",
+      "price_eur":    419,
+      "seats_left":   null,
+      "booking_url":  "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2MDgyOUgBagcIARIDQU1TcgcIARIDWkFEGh4SCjIwMjYwOTA1SAFqBwgBEgNaQURyBwgBEgNBTVM"
+    },
+    "EI603": {
+      "heen_flight":  "EI603",
+      "heen_airline": "Aer Lingus",
+      "heen_from":    "AMS",
+      "heen_to":      "ZAD",
+      "heen_dep":     "09:35",
+      "heen_arr":     "15:30",
+      "heen_date":    "29 aug 2026",
+      "terug_flight": "Ryanair + KLM",
+      "terug_dep":    "08:50",
+      "terug_arr":    "13:50",
+      "terug_date":   "5 sep 2026",
+      "price_eur":    412,
+      "seats_left":   2,
+      "booking_url":  "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2MDgyOUgBagcIARIDQU1TcgcIARIDWkFEGh4SCjIwMjYwOTA1SAFqBwgBEgNaQURyBwgBEgNBTVM"
+    }
+  }
+}

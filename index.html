@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JCI Regatta 2026</title>
+  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+  <!-- STICKY NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="images/jci-logo.png" alt="JCI Logo" class="nav-jci-logo">
+        <span class="logo-text">Regatta 2026</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#waarom">Waarom?</a></li>
+        <li><a href="#videos">Inspiratie</a></li>
+        <li><a href="#route">Route</a></li>
+        <li><a href="#boten">Boten</a></li>
+        <li><a href="#calculator">Kosten</a></li>
+        <li><a href="#vluchten">Vluchten</a></li>
+        <li><a href="#aanmelden" class="nav-cta">Aanmelden</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap">
+        <img src="images/jci-logo.png" alt="JCI Logo" class="hero-jci-logo">
+      </div>
+      <h1>Hierna wil je<br><span class="highlight">alleen nog zeilen</span></h1>
+      <p class="hero-sub">29 augustus &ndash; 5 september 2026 &bull; Zadar, Kroatië</p>
+      <p class="hero-desc">Een onvergetelijke week langs de Dalmatische eilanden. Zon op je gezicht, zout in je haar en een bootcrew die vrienden worden voor het leven. JCI Regatta 2026 — dit wil je niet missen.</p>
+      <div class="hero-actions">
+        <a href="#boten" class="btn btn-primary">Bekijk de boten</a>
+        <a href="#aanmelden" class="btn btn-outline">Direct aanmelden</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Aanmeldingen nu</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">9</span><span class="stat-label">Boten beschikbaar</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label">Max. personen</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label">Dagen zeilen</span></div>
+      </div>
+    </div>
+    <a href="#waarom" class="hero-scroll" aria-label="Scroll naar beneden">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10l5 5 5-5"/></svg>
+    </a>
+  </section>
+
+  <!-- WAAROM MEEDOEN -->
+  <section id="waarom" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Waarom meedoen?</span>
+        <h2>Meer dan alleen zeilen</h2>
+        <p>JCI organiseert een exclusieve zeilweek speciaal voor leden. Combineer avontuur met netwerken en vriendschap op het prachtige Adriatische Zee.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">&#9875;</div>
+          <h3>Onvergetelijk avontuur</h3>
+          <p>Zeilen langs eilanden als Dugi Otok, Kornati en Murter. Elke dag een nieuw ankerplaats, elke avond een andere marina.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#127754;</div>
+          <h3>Alles geregeld</h3>
+          <p>Wij regelen de boten, het programma en de begeleidende schipper. Jij hoeft alleen maar te genieten.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#127774;</div>
+          <h3>Zon &amp; zee</h3>
+          <p>Eind augustus is het perfect: gemiddeld 28°C, weinig regen en genoeg wind om mooi te zeilen.</p>
+        </div>
+      </div>
+
+      <!-- JCI COMMUNITY BLOCK -->
+      <div class="community-block">
+        <div class="community-text">
+          <span class="section-tag">JCI Community</span>
+          <h3>Samen op het water</h3>
+          <p>De JCI Regatta brengt leden van heel Nederland samen op het water. Sta in de ring bij de start, vier overwinningen in de marina en kom thuis met verhalen voor het leven. Dit is meer dan zeilen — dit is JCI op zijn best.</p>
+        </div>
+        <div class="community-photos">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/IMG_7003-1024x1024.jpg" alt="JCI crew samen" class="cp-main">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/01/GIDC8817-1024x768.jpg" alt="JCI zeilers" class="cp-a">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/SKSY1907-1024x916.jpg" alt="JCI regatta" class="cp-b">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/JOMQ6947-1024x990.jpg" alt="JCI zeilen" class="cp-c">
+        </div>
+      </div>
+
+      <!-- FOTO GALERIJ -->
+      <div class="photo-strip">
+        <a href="https://www.jci-regatta.com/media/" target="_blank" rel="noopener" class="photo-strip-source">Foto&rsquo;s: jci-regatta.com &rarr;</a>
+        <div class="photo-strip-scroll">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/01/XOBW0032-1024x768.jpg" alt="JCI Regatta">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/FMJI1158-989x1024.jpg" alt="JCI Regatta">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/01/FZAJ5073_2-1024x768.jpg" alt="JCI Regatta">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/IMG_7715.jpg" alt="JCI Regatta">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/IMG_4240-1024x683.jpg" alt="JCI Regatta">
+          <img src="https://www.jci-regatta.com/wp-content/uploads/2019/02/RMCS8336-768x1024.jpg" alt="JCI Regatta">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSPIRATIE VIDEOS -->
+  <section id="videos" class="section section-dark">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Inspiratie</span>
+        <h2>Zo ziet jouw week eruit</h2>
+        <p>Bekijk de sfeer van een JCI regatta langs de Kroatische kust en laat je overtuigen.</p>
+      </div>
+      <div class="playlist-layout">
+        <!-- MAIN PLAYER -->
+        <div class="playlist-player">
+          <div class="video-wrapper" id="main-video-wrapper" data-video-id="0Oq1wVHgZ1M">
+            <div class="video-thumb" id="main-video-thumb" onclick="loadVideo(this.closest('.video-wrapper'), true)">
+              <img id="main-video-thumb-img" src="https://img.youtube.com/vi/0Oq1wVHgZ1M/maxresdefault.jpg" alt="JCI Sailing Week Croatia">
+              <div class="play-btn"><svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/><polygon points="32,24 60,40 32,56" fill="white"/></svg></div>
+            </div>
+          </div>
+          <p class="video-desc" id="main-video-desc">JCI Regatta 2026 — sfeerimpressie op de Adriatische Zee.</p>
+        </div>
+        <!-- PLAYLIST SIDEBAR -->
+        <div class="playlist-sidebar" id="playlist-sidebar">
+          <div class="playlist-item active" data-id="0Oq1wVHgZ1M" data-desc="JCI Regatta 2026 — sfeerimpressie op de Adriatische Zee." onclick="selectVideo(this)">
+            <div class="pli-thumb"><img src="https://img.youtube.com/vi/0Oq1wVHgZ1M/mqdefault.jpg" alt=""></div>
+            <div class="pli-info">
+              <div class="pli-title">JCI Regatta 2026</div>
+              <div class="pli-sub">Sfeerimpressie</div>
+            </div>
+          </div>
+          <div class="playlist-item" data-id="HVgaaIl0Y3M" data-desc="De Dalmatische kust: eilanden, baaien en kristalhelder water." onclick="selectVideo(this)">
+            <div class="pli-thumb"><img src="https://img.youtube.com/vi/HVgaaIl0Y3M/mqdefault.jpg" alt=""></div>
+            <div class="pli-info">
+              <div class="pli-title">Zeilen in Kroatië</div>
+              <div class="pli-sub">Dalmatische kust</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAILING ROUTE MAP -->
+  <section id="route" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">De route</span>
+        <h2>Jouw zeilroute</h2>
+        <p>Een voorbeeldroute langs de mooiste plekken van de Dalmatische kust. Klik op de stops voor meer info. De echte route bepalen jullie zelf!</p>
+      </div>
+      <div class="map-layout">
+        <div id="sailing-map"></div>
+        <div class="route-legend">
+          <h4>Geplande stops</h4>
+          <div class="route-stops" id="route-stops">
+            <!-- Filled by JS -->
+          </div>
+          <div class="route-meta">
+            <div class="route-meta-item">
+              <span class="rmeta-icon">&#127757;</span>
+              <div>
+                <strong>Totale afstand</strong>
+                <span>ca. 180 zeemijl</span>
+              </div>
+            </div>
+            <div class="route-meta-item">
+              <span class="rmeta-icon">&#9928;</span>
+              <div>
+                <strong>Wind (aug/sep)</strong>
+                <span>Maestral 3&ndash;4 Bft overdag</span>
+              </div>
+            </div>
+            <div class="route-meta-item">
+              <span class="rmeta-icon">&#127774;</span>
+              <div>
+                <strong>Temperatuur</strong>
+                <span>Lucht 28&deg;C &bull; Zee 26&deg;C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTEN SELECTOR -->
+  <section id="boten" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Booten kiezen</span>
+        <h2>Kies jouw boot in 3 stappen</h2>
+        <p>We hebben nu <strong>4 aanmeldingen</strong> — maximaal 10 personen. Kies eerst het aantal personen, daarna de boot, dan de vlucht.</p>
+      </div>
+
+      <!-- STAP 1: Aantal personen -->
+      <div class="flow-step">
+        <div class="flow-step-header">
+          <span class="flow-num">1</span>
+          <div>
+            <h3>Hoeveel personen gaan er mee?</h3>
+            <p>Kies de groepsgrootte om de passende boten te zien.</p>
+          </div>
+        </div>
+        <div class="group-btns" id="group-btns">
+          <button class="group-btn" data-size="6">
+            <span class="group-icon">&#9875;</span>
+            <span class="group-size">t/m 6 pers.</span>
+            <span class="group-label">Kleine groep</span>
+            <span class="group-hint">Compacte boten</span>
+          </button>
+          <button class="group-btn" data-size="8">
+            <span class="group-icon">&#9973;</span>
+            <span class="group-size">t/m 8 pers.</span>
+            <span class="group-label">Middelgrote groep</span>
+            <span class="group-hint">Meest populair</span>
+          </button>
+          <button class="group-btn" data-size="10">
+            <span class="group-icon">&#128674;</span>
+            <span class="group-size">t/m 10 pers.</span>
+            <span class="group-label">Grote groep</span>
+            <span class="group-hint">Grote, ruime boten</span>
+          </button>
+        </div>
+        <div class="signup-counter">
+          <div class="counter-bar-wrap">
+            <div class="counter-bar" id="counter-bar"></div>
+          </div>
+          <p><strong>4</strong> aanmeldingen &bull; maximaal <strong>10</strong> personen &bull; nog <strong>6 plaatsen vrij</strong></p>
+        </div>
+      </div>
+
+      <!-- STAP 2: Boot kiezen -->
+      <div class="flow-step" id="step-boats">
+        <div class="flow-step-header">
+          <span class="flow-num">2</span>
+          <div>
+            <h3>Kies je boot</h3>
+            <p id="boats-filter-info">Kies eerst een groepsgrootte hierboven om boten te filteren.</p>
+          </div>
+        </div>
+
+        <div class="boats-controls">
+          <div class="boats-filter">
+            <span class="filter-label">Sorteer:</span>
+            <button class="filter-btn active" data-sort="default">Standaard</button>
+            <button class="filter-btn" data-sort="price-asc">Prijs &uarr;</button>
+            <button class="filter-btn" data-sort="price-desc">Prijs &darr;</button>
+            <button class="filter-btn" data-sort="length">Lengte</button>
+          </div>
+          <div class="boats-search">
+            <input type="text" id="boat-search" placeholder="Zoek op naam of type..." autocomplete="off">
+          </div>
+        </div>
+
+        <div class="boats-grid" id="boats-grid">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="boats-note">
+          <span>&#9432;</span> Prijzen zijn per boot per week excl. havenkosten en brandstof (APA). Klik op een boot voor meer details.
+        </div>
+      </div>
+
+      <!-- STAP 3: Vlucht boeken -->
+      <div class="flow-step flow-step-cta" id="step-flight-cta">
+        <div class="flow-step-header">
+          <span class="flow-num">3</span>
+          <div>
+            <h3>Boek je vlucht</h3>
+            <p>Boot gekozen? Scroll naar de vluchtzoeker. Amsterdam &rarr; Zadar, 29 aug &ndash; 5 sep 2026.</p>
+          </div>
+        </div>
+        <a href="#vluchten" class="btn btn-primary">
+          Zoek vluchten AMS &rarr; ZAD &darr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIJS CALCULATOR -->
+  <section id="calculator" class="section section-dark">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Kosten</span>
+        <h2>Wat kost het per persoon?</h2>
+        <p>Kies je boot, vlucht en geschatte kosten voor eten en APA &mdash; en zie direct de totaalprijs per persoon.</p>
+      </div>
+
+      <div class="calc-widget">
+        <div class="calc-slider-block">
+          <div class="calc-slider-label">
+            <span>Aantal personen:</span>
+            <span class="calc-count-display"><strong id="calc-person-count">6</strong> personen</span>
+          </div>
+          <div class="calc-person-icons" id="calc-person-icons">
+            <!-- filled by JS -->
+          </div>
+          <div class="calc-range-wrap">
+            <span class="calc-range-min">2</span>
+            <input type="range" id="person-slider" min="2" max="10" value="6" step="1" class="person-range">
+            <span class="calc-range-max">10</span>
+          </div>
+          <div class="calc-ticks">
+            <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+            <span>7</span><span>8</span><span>9</span><span>10</span>
+          </div>
+          <p class="calc-sub">Klik een boot hieronder aan om hem te selecteren. Koppelt automatisch aan de groepsknop hierboven.</p>
+        </div>
+
+        <div class="calc-results" id="calc-results">
+          <!-- Filled by JS -->
+        </div>
+
+        <p class="calc-note">&#9432; Prijs per persoon = bootverhuur gedeeld door aantal personen.</p>
+      </div>
+
+      <!-- STAP 2: VLUCHT KIEZEN -->
+      <div class="trip-section">
+        <h3 class="trip-section-title"><span class="trip-num">2</span> Kies je vlucht</h3>
+        <div class="flight-picker" id="flight-picker">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- STAP 3: EXTRA KOSTEN -->
+      <div class="trip-section">
+        <h3 class="trip-section-title"><span class="trip-num">3</span> Extra kosten inschatten</h3>
+        <div class="extra-costs-grid">
+          <div class="ec-card">
+            <div class="ec-header">
+              <div class="ec-icon">🍽️</div>
+              <div>
+                <div class="ec-label">Eten &amp; drinken</div>
+                <div class="ec-sub">per persoon per dag &times; 7 dagen</div>
+              </div>
+              <div class="ec-value-wrap">
+                <span class="ec-prefix">&euro;</span>
+                <input type="number" id="ec-food-day" class="ec-input" value="70" min="40" max="100" step="5">
+                <span class="ec-suffix">/dag</span>
+              </div>
+            </div>
+            <input type="range" id="ec-food-slider" min="40" max="100" value="70" step="5" class="ec-range">
+            <div class="ec-range-labels"><span>&euro;40</span><span class="ec-range-hint">standaard &euro;70</span><span>&euro;100</span></div>
+            <div class="ec-total-line">Totaal: <strong id="ec-food-total">&euro;490</strong> <span>per persoon (7 dgn)</span></div>
+          </div>
+          <div class="ec-card">
+            <div class="ec-header">
+              <div class="ec-icon">⚓</div>
+              <div>
+                <div class="ec-label">APA — haven, brandstof &amp; overig</div>
+                <div class="ec-sub">havengeld, diesel, dinghy, schoonmaak, linnen</div>
+              </div>
+              <div class="ec-value-wrap">
+                <span class="ec-prefix">&euro;</span>
+                <input type="number" id="ec-apa-total" class="ec-input" value="600" min="400" max="800" step="50">
+                <span class="ec-suffix">totaal</span>
+              </div>
+            </div>
+            <input type="range" id="ec-apa-slider" min="400" max="800" value="600" step="50" class="ec-range">
+            <div class="ec-range-labels"><span>&euro;400</span><span class="ec-range-hint">standaard &euro;600</span><span>&euro;800</span></div>
+            <div class="ec-total-line">Per persoon: <strong id="ec-apa-pp">&euro;100</strong> <span id="ec-apa-pp-note">(bij 6 pers.)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRIP SUMMARY -->
+      <div class="trip-summary" id="trip-summary" style="display:none">
+        <h3 class="trip-section-title"><span class="trip-num">3</span> Jouw totaalprijs per persoon</h3>
+        <div class="trip-summary-inner" id="trip-summary-inner">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VLUCHTEN -->
+  <section id="vluchten" class="section section-dark">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Vluchten</span>
+        <h2>Boek je vlucht</h2>
+        <p>Amsterdam (AMS) &rarr; Zadar (ZAD) &bull; 29 augustus &ndash; 5 september 2026</p>
+      </div>
+
+      <!-- AANBEVOLEN VLUCHTEN LIJST -->
+      <div class="flights-intro">
+        <p>Hieronder staan de <strong>beste vluchten</strong> voor deze trip &mdash; geselecteerd op tijdstip, prijs en comfort. Klik op &ldquo;Google Flights&rdquo; of &ldquo;Skyscanner&rdquo; om de actuele prijs te zien en direct te boeken.</p>
+        <div class="flights-route-badge">
+          <span class="frb-item"><span class="frb-code">AMS</span> Amsterdam</span>
+          <span class="frb-arrow">&#9992;</span>
+          <span class="frb-item"><span class="frb-code">ZAD</span> Zadar</span>
+          <span class="frb-dates">29 aug &ndash; 5 sep 2026</span>
+        </div>
+      </div>
+
+      <div class="flights-columns">
+        <!-- HEENVLUCHTEN -->
+        <div class="flights-col">
+          <h3 class="flights-col-title"><span class="col-icon">&#9992;</span> Heenvluchten <span class="col-sub">AMS &rarr; ZAD &bull; 29 aug</span></h3>
+          <div id="flights-heen" class="flight-cards-list">
+            <!-- filled by JS -->
+          </div>
+        </div>
+
+        <!-- TERUGVLUCHTEN -->
+        <div class="flights-col">
+          <h3 class="flights-col-title"><span class="col-icon">&#9992; </span> Terugvluchten <span class="col-sub">ZAD &rarr; AMS &bull; 5 sep</span></h3>
+          <div id="flights-terug" class="flight-cards-list">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div id="prices-timestamp" class="prices-timestamp" style="display:none"></div>
+
+      <div class="flights-disclaimer">
+        <span>&#9432;</span> Prijzen zijn live &mdash; klik op een knop om de actuele prijs te zien. Boek zo vroeg mogelijk, prijzen stijgen naarmate de vertrekdatum nadert.
+        &nbsp;&bull;&nbsp; Vluchtnummers zijn indicatief; controleer altijd de actuele dienstregeling.
+      </div>
+    </div>
+  </section>
+
+  <!-- AANMELDEN -->
+  <section id="aanmelden" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Aanmelden</span>
+        <h2>Doe mee!</h2>
+        <p>Geef je interesse door via het formulier. We nemen contact op met meer informatie en de definitieve bootindeling.</p>
+      </div>
+
+      <div class="signup-layout">
+        <form class="signup-form" id="signup-form" onsubmit="return handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Voornaam *</label>
+              <input type="text" id="f-name" name="name" required placeholder="Jan">
+            </div>
+            <div class="form-group">
+              <label for="f-lastname">Achternaam *</label>
+              <input type="text" id="f-lastname" name="lastname" required placeholder="de Vries">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-email">E-mailadres *</label>
+              <input type="email" id="f-email" name="email" required placeholder="jan@email.com">
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Telefoonnummer</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+31 6 12345678">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-boat">Voorkeur boot</label>
+            <select id="f-boat" name="boat">
+              <option value="">-- Nog geen voorkeur --</option>
+              <!-- Filled by JS -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-experience">Zeilerervaring</label>
+            <select id="f-experience" name="experience">
+              <option value="none">Geen ervaring (schipper aanwezig)</option>
+              <option value="beginner">Beginner (een paar keer gezeild)</option>
+              <option value="intermediate">Gevorderd (regelmatig zeilen)</option>
+              <option value="skipper">Schipper (brevet aanwezig)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Opmerkingen / vragen</label>
+            <textarea id="f-message" name="message" rows="3" placeholder="Bijv. dieetwensen, of je wil bijslapen op de boot..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="f-whatsapp" name="whatsapp" value="yes">
+            <label for="f-whatsapp">Voeg me toe aan de WhatsApp-groep voor updates</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Stuur mijn aanmelding</button>
+          <p class="form-disclaimer">* Verplichte velden. Je gegevens worden alleen gebruikt voor de organisatie van de JCI Regatta 2026 en niet gedeeld met derden.</p>
+        </form>
+
+        <div class="signup-side">
+          <div class="signup-contact">
+            <h4>Vragen?</h4>
+            <p>Neem direct contact op met de organisatie.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <span class="contact-icon">&#128140;</span>
+                <span>sailing@jci.nl</span>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">&#128241;</span>
+                <span>+31 6 00 000 000</span>
+              </div>
+            </div>
+            <a href="https://wa.me/31600000000?text=Hoi!%20Ik%20heb%20interesse%20in%20de%20JCI%20Sailing%20Week%202026" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              WhatsApp ons
+            </a>
+          </div>
+
+          <div class="signup-timeline">
+            <h4>Tijdlijn</h4>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot active"></div>
+                <div class="tl-content">
+                  <strong>Nu open</strong>
+                  <span>Interesse opgeven</span>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <strong>1 april 2026</strong>
+                  <span>Definitieve aanmelding + aanbetaling</span>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <strong>1 juni 2026</strong>
+                  <span>Bootindeling bekend + restbetaling</span>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <strong>29 aug 2026</strong>
+                  <span>Vertrek &mdash; welkom in Zadar!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS MODAL -->
+  <div id="success-modal" class="modal-overlay" style="display:none">
+    <div class="modal-box">
+      <div class="modal-icon">&#127881;</div>
+      <h3>Aanmelding ontvangen!</h3>
+      <p>Bedankt voor je aanmelding. We nemen zo snel mogelijk contact met je op met meer informatie over de JCI Regatta 2026.</p>
+      <button onclick="closeModal()" class="btn btn-primary">Sluiten</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/jci-logo.png" alt="JCI Logo" class="footer-jci-logo">
+          <span class="logo-text">Regatta 2026</span>
+          <p>Georganiseerd door JCI Nederland &mdash; Sailing Commissie</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#waarom">Waarom</a>
+          <a href="#boten">Boten</a>
+          <a href="#calculator">Kosten</a>
+          <a href="#vluchten">Vluchten</a>
+          <a href="#aanmelden">Aanmelden</a>
+        </div>
+        <div class="footer-info">
+          <p>29 aug &ndash; 5 sep 2026</p>
+          <p>Zadar, Kroatië</p>
+          <p>sailing@jci.nl</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JCI Nederland Regatta 2026. Alle rechten voorbehouden.</p>
+        <p>Prijzen zijn indicatief en onder voorbehoud van beschikbaarheid.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js?v=12"></script>
+</body>
+</html>

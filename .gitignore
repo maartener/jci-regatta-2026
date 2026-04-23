@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Sensitive scripts (bevat API tokens)
+fetch_prices.py
+serve.py
+
+# Claude interne bestanden
+.claude/
+
+# Rauwe bronbestanden (geen onderdeel van de website)
+*.rtf
+BAVARIA*.html
+Bavaria*.html
+Bavaria*.png
+BAVARIA*.png
+JCI LOGO.png
