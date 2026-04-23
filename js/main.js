@@ -13,7 +13,7 @@ const teams = [
   { name:"Bavaria 1.",    country:"Duitsland",      flag:"🇩🇪", skipper:"Markus A. Spiess",   boat:"Hanse 508",           nl:false },
   { name:"Spritz Ahoi",   country:"Duitsland",      flag:"🇩🇪", skipper:"Carolin Rössle",     boat:"TBD",                 nl:false },
   { name:"JCI Pirates",   country:"Internationaal", flag:"🌍",  skipper:"Stefan Salem",       boat:"Dufour 460 GL",       nl:false },
-  { name:"JCI Nederland", country:"Nederland",      flag:"🇳🇱", skipper:"TBD",                boat:"Bavaria (zie boten)", nl:true  },
+  { name:"JCI Amsterdam", country:"Nederland",      flag:"🇳🇱", skipper:"Alicia van Woensel", boat:"Bavaria (zie boten)", nl:true  },
 ];
 
 function renderTeams() {
