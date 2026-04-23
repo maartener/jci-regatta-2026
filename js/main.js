@@ -2,6 +2,37 @@
    JCI SAILING WEEK 2026 – MAIN JS
    ============================================ */
 
+// ── TEAMS DATA ───────────────────────────────
+const teams = [
+  { name:"Finntastic",    country:"Finland",        flag:"🇫🇮", skipper:"Niklas Enkvist",     boat:"First 45",            nl:false },
+  { name:"Finnbreeze",    country:"Finland",        flag:"🇫🇮", skipper:"Ilkka Kauhanen",     boat:"First 45",            nl:false },
+  { name:"Hammertime",    country:"Finland",        flag:"🇫🇮", skipper:"Eelis Norja",        boat:"First 45",            nl:false },
+  { name:"Top Gun",       country:"Duitsland",      flag:"🇩🇪", skipper:"Michael Schneiders", boat:"Elan Impression 50.1",nl:false },
+  { name:"One World",     country:"Duitsland",      flag:"🇩🇪", skipper:"Klaus Böde",         boat:"First 45",            nl:false },
+  { name:"FollowMe",      country:"Zwitserland",    flag:"🇨🇭", skipper:"Adrian Leutenegger", boat:"TBD",                 nl:false },
+  { name:"Bavaria 1.",    country:"Duitsland",      flag:"🇩🇪", skipper:"Markus A. Spiess",   boat:"Hanse 508",           nl:false },
+  { name:"Spritz Ahoi",   country:"Duitsland",      flag:"🇩🇪", skipper:"Carolin Rössle",     boat:"TBD",                 nl:false },
+  { name:"JCI Pirates",   country:"Internationaal", flag:"🌍",  skipper:"Stefan Salem",       boat:"Dufour 460 GL",       nl:false },
+  { name:"JCI Nederland", country:"Nederland",      flag:"🇳🇱", skipper:"TBD",                boat:"Bavaria (zie boten)", nl:true  },
+];
+
+function renderTeams() {
+  const el = document.getElementById('teams-grid');
+  if (!el) return;
+  el.innerHTML = teams.map(t => `
+    <div class="team-card ${t.nl ? 'team-card-nl' : ''}">
+      ${t.nl ? '<span class="team-badge">Wij doen mee! 🎉</span>' : ''}
+      <div class="team-flag">${t.flag}</div>
+      <div class="team-name">${t.name}</div>
+      <div class="team-country">${t.country}</div>
+      <div class="team-details">
+        <div class="team-detail-row"><span class="td-label">Schipper</span><span>${t.skipper}</span></div>
+        <div class="team-detail-row"><span class="td-label">Boot</span><span>${t.boat}</span></div>
+      </div>
+    </div>
+  `).join('');
+}
+
 // ── BOAT DATA (9 boten) ─────────────────────
 const boats = [
   {
@@ -1091,6 +1122,7 @@ function loadLivePrices() {
 // ── INIT ─────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  renderTeams();
   renderBoats();
   initControls();
   initGroupSelector();
