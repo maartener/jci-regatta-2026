@@ -2317,3 +2317,98 @@ footer {
   .playlist-item { min-width: 160px; flex-direction: column; text-align: center; }
   .pli-thumb { width: 100%; height: 80px; }
 }
+
+/* ════════════════════════════════════════
+   MOBILE — uitgebreide fixes (≤480px)
+   ════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /*── Algemeen ── */
+  .section { padding: 56px 0; }
+  .container { padding: 0 16px; }
+  .section-header { margin-bottom: 36px; }
+  .section-header h2 { font-size: 1.75rem; }
+
+  /* ── Hero ── */
+  #hero { min-height: 100svh; }
+  .hero-content { padding: 20px 20px 32px; }
+  .hero-jci-logo { width: 120px; height: auto; }
+  .hero-logo-wrap { margin-bottom: 16px; }
+  h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-desc { font-size: 0.88rem; line-height: 1.6; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 24px;
+  }
+  .hero-stats .stat { padding: 14px 10px; }
+  .hero-stats .stat-divider { display: none; }
+  .stat-num { font-size: 1.6rem; }
+
+  /* ── Groepsknoppen ── */
+  .group-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .group-btn:last-child { grid-column: 1 / -1; }
+
+  /* ── Boten grid ── */
+  .boats-grid { grid-template-columns: 1fr; }
+  .boats-controls { flex-direction: column; gap: 10px; }
+  .boats-filter { flex-wrap: wrap; gap: 6px; }
+
+  /* ── Calculator ── */
+  .calc-results { grid-template-columns: 1fr; }
+  .calc-card { padding: 16px; }
+  .calc-ticks { font-size: 0.7rem; }
+
+  /* ── Flight picker ── */
+  .flight-picker { grid-template-columns: 1fr !important; }
+  .fp-card { padding: 16px; }
+  .fp-route { gap: 6px; font-size: 0.85rem; }
+  .fp-airport { font-size: 1rem; }
+
+  /* ── Vluchten ── */
+  .flights-columns { grid-template-columns: 1fr; }
+  .flight-card { padding: 16px; }
+
+  /* ── Teams ── */
+  .teams-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .team-card { padding: 16px 12px; }
+  .team-flag { font-size: 1.8rem; }
+  .org-banner { flex-direction: column; gap: 12px; text-align: center; }
+  .org-banner .btn { width: 100%; }
+
+  /* ── Community ── */
+  .community-block { gap: 24px; }
+  .community-photos { grid-template-columns: 1fr 1fr; }
+
+  /* ── Route map ── */
+  .map-layout { grid-template-columns: 1fr; }
+  #sailing-map { height: 280px !important; }
+
+  /* ── Aanmelden form ── */
+  .signup-layout { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* ── Flow steps ── */
+  .flow-step-header { gap: 12px; }
+  .flow-num { width: 32px; height: 32px; font-size: 0.9rem; flex-shrink: 0; }
+
+  /* ── Extra kosten ── */
+  .ec-header { flex-wrap: wrap; gap: 8px; }
+  .ec-value-wrap { width: 100%; justify-content: flex-start; }
+
+  /* ── Trip summary ── */
+  .ts-row { flex-wrap: wrap; gap: 4px; }
+
+  /* ── Org banner ── */
+  .org-text { text-align: left; }
+}
