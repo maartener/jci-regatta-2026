@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JCI Regatta 2026</title>
-  <link rel="stylesheet" href="css/style.css?v=17">
+  <link rel="stylesheet" href="css/style.css?v=18">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -126,13 +126,13 @@
       <div class="section-header">
         <span class="section-tag">Internationale regatta</span>
         <h2>Wie doen er mee?</h2>
-        <p>De JCI Sailing Week wordt georganiseerd door <strong>JCI International</strong> en trekt teams uit heel Europa. JCI Amsterdam vaart mee als deelnemer &mdash; jij maakt deel uit van dit internationale veld!</p>
+        <p>De JCI Sailing Week wordt georganiseerd door <strong>JCI Zwitserland</strong> en trekt teams uit heel Europa. JCI Amsterdam vaart mee als deelnemer &mdash; jij maakt deel uit van dit internationale veld!</p>
       </div>
 
       <div class="org-banner">
         <span class="org-icon">🌍</span>
         <div class="org-text">
-          <strong>Georganiseerd door JCI Sailing Week International</strong>
+          <strong>Georganiseerd door JCI Zwitserland &mdash; JCI Sailing Week</strong>
           <span>Niet door JCI Amsterdam &mdash; wij nemen deel als crew</span>
         </div>
         <a href="https://www.jcisailingweek.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline">Officiële website &rarr;</a>
@@ -193,7 +193,7 @@
       <div class="section-header">
         <span class="section-tag">De route</span>
         <h2>Jouw zeilroute</h2>
-        <p>Een voorbeeldroute langs de mooiste plekken van de Dalmatische kust. Klik op de stops voor meer info. De echte route bepalen jullie zelf!</p>
+        <p>De route wordt samengesteld door <strong>JCI Zwitserland</strong>, organisator van de JCI Sailing Week. Klik op de stops voor meer info over elke haven.</p>
       </div>
       <div class="map-layout">
         <div id="sailing-map"></div>
@@ -470,105 +470,22 @@
 
       <div class="kos-note">
         <span>&#9432;</span> Wil je een exacte berekening op basis van jouw boot, groepsgrootte en vluchtkeuze?
-        Vraag een code aan via <a href="#aanmelden">het aanmeldformulier</a> en gebruik de interactieve rekenmachine.
+        Wil je een exacte berekening? Open de <a href="calculator.html">interactieve rekenmachine</a> en stel jouw eigen kosten samen.
       </div>
     </div>
   </section>
 
-  <!-- PRIJS CALCULATOR (gated) -->
-  <section id="calculator" class="section section-dark" style="display:none">
+  <!-- CALCULATOR CTA -->
+  <section id="calculator-cta" class="section section-dark">
     <div class="container">
-      <div class="section-header light">
-        <span class="section-tag">Kosten</span>
-        <h2>Wat kost het per persoon?</h2>
-        <p>Kies je boot, vlucht en geschatte kosten voor eten en APA &mdash; en zie direct de totaalprijs per persoon.</p>
-      </div>
-
-      <div class="calc-widget">
-        <div class="calc-slider-block">
-          <div class="calc-slider-label">
-            <span>Aantal personen:</span>
-            <span class="calc-count-display"><strong id="calc-person-count">6</strong> personen</span>
-          </div>
-          <div class="calc-person-icons" id="calc-person-icons">
-            <!-- filled by JS -->
-          </div>
-          <div class="calc-range-wrap">
-            <span class="calc-range-min">2</span>
-            <input type="range" id="person-slider" min="2" max="10" value="6" step="1" class="person-range">
-            <span class="calc-range-max">10</span>
-          </div>
-          <div class="calc-ticks">
-            <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
-            <span>7</span><span>8</span><span>9</span><span>10</span>
-          </div>
-          <p class="calc-sub">Klik een boot hieronder aan om hem te selecteren. Koppelt automatisch aan de groepsknop hierboven.</p>
+      <div class="calc-cta-block">
+        <div class="calc-cta-icon">🧮</div>
+        <div class="calc-cta-text">
+          <h3>Bereken jouw exacte kosten</h3>
+          <p>Gebruik de interactieve rekenmachine om de totaalprijs per persoon te berekenen op basis van jouw boot, groepsgrootte, vlucht en extra kosten.</p>
         </div>
-
-        <div class="calc-results" id="calc-results">
-          <!-- Filled by JS -->
-        </div>
-
-        <p class="calc-note">&#9432; Prijs per persoon = bootverhuur gedeeld door aantal personen.</p>
+        <a href="calculator.html" class="btn btn-primary">Naar de rekenmachine &rarr;</a>
       </div>
-
-      <!-- STAP 2: VLUCHT KIEZEN -->
-      <div class="trip-section">
-        <h3 class="trip-section-title"><span class="trip-num">2</span> Kies je vlucht</h3>
-        <div class="flight-picker" id="flight-picker">
-          <!-- filled by JS -->
-        </div>
-      </div>
-
-      <!-- STAP 3: EXTRA KOSTEN -->
-      <div class="trip-section">
-        <h3 class="trip-section-title"><span class="trip-num">3</span> Extra kosten inschatten</h3>
-        <div class="extra-costs-grid">
-          <div class="ec-card">
-            <div class="ec-header">
-              <div class="ec-icon">🍽️</div>
-              <div>
-                <div class="ec-label">Eten &amp; drinken</div>
-                <div class="ec-sub">per persoon per dag &times; 7 dagen</div>
-              </div>
-              <div class="ec-value-wrap">
-                <span class="ec-prefix">&euro;</span>
-                <input type="number" id="ec-food-day" class="ec-input" value="70" min="40" max="100" step="5">
-                <span class="ec-suffix">/dag</span>
-              </div>
-            </div>
-            <input type="range" id="ec-food-slider" min="40" max="100" value="70" step="5" class="ec-range">
-            <div class="ec-range-labels"><span>&euro;40</span><span class="ec-range-hint">standaard &euro;70</span><span>&euro;100</span></div>
-            <div class="ec-total-line">Totaal: <strong id="ec-food-total">&euro;490</strong> <span>per persoon (7 dgn)</span></div>
-          </div>
-          <div class="ec-card">
-            <div class="ec-header">
-              <div class="ec-icon">⚓</div>
-              <div>
-                <div class="ec-label">APA — haven, brandstof &amp; overig</div>
-                <div class="ec-sub">havengeld, diesel, dinghy, schoonmaak, linnen</div>
-              </div>
-              <div class="ec-value-wrap">
-                <span class="ec-prefix">&euro;</span>
-                <input type="number" id="ec-apa-total" class="ec-input" value="600" min="400" max="800" step="50">
-                <span class="ec-suffix">totaal</span>
-              </div>
-            </div>
-            <input type="range" id="ec-apa-slider" min="400" max="800" value="600" step="50" class="ec-range">
-            <div class="ec-range-labels"><span>&euro;400</span><span class="ec-range-hint">standaard &euro;600</span><span>&euro;800</span></div>
-            <div class="ec-total-line">Per persoon: <strong id="ec-apa-pp">&euro;100</strong> <span id="ec-apa-pp-note">(bij 6 pers.)</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TRIP SUMMARY -->
-      <div class="trip-summary" id="trip-summary" style="display:none">
-        <h3 class="trip-section-title"><span class="trip-num">3</span> Jouw totaalprijs per persoon</h3>
-        <div class="trip-summary-inner" id="trip-summary-inner">
-          <!-- filled by JS -->
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -783,6 +700,6 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/main.js?v=17"></script>
+  <script src="js/main.js?v=18"></script>
 </body>
 </html>

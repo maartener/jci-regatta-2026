@@ -1124,11 +1124,9 @@ function loadLivePrices() {
 function applyUnlock() {
   const pub = document.getElementById('boten-public');
   const gated = document.getElementById('boten-gated');
-  const calc = document.getElementById('calculator');
   const wrap = document.getElementById('unlock-wrap');
   if (pub)   pub.style.display   = 'none';
   if (gated) gated.style.display = '';
-  if (calc)  calc.style.display  = '';
   if (wrap)  wrap.innerHTML = '<span style="color:var(--jci-gold);font-size:0.85rem">✓ Toegang verleend</span>';
 }
 
