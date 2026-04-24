@@ -2349,6 +2349,10 @@ footer {
   margin-bottom: 40px;
   /* 8 photos = 2 rows of 4 */
 }
+.boten-photo-grid-detail {
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
 .bp-item {
   border-radius: var(--radius-sm);
   overflow: hidden;
