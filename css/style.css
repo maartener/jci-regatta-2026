@@ -2347,20 +2347,48 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-bottom: 40px;
+  /* 8 photos = 2 rows of 4 */
 }
 .bp-item {
   border-radius: var(--radius-sm);
   overflow: hidden;
   aspect-ratio: 4/3;
   box-shadow: var(--shadow);
+  position: relative;
 }
 .bp-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
+  display: block;
 }
 .bp-item:hover img { transform: scale(1.06); }
+.bp-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+  padding: 20px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.bp-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.bp-model {
+  color: var(--jci-gold);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
 
 .teaser-unlock-hint {
   display: flex;
