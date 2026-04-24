@@ -1120,6 +1120,36 @@ function loadLivePrices() {
 }
 
 // ── INIT ─────────────────────────────────────
+// ── UNLOCK / CODE GATE ───────────────────────
+function applyUnlock() {
+  const pub = document.getElementById('boten-public');
+  const gated = document.getElementById('boten-gated');
+  const calc = document.getElementById('calculator');
+  const wrap = document.getElementById('unlock-wrap');
+  if (pub)   pub.style.display   = 'none';
+  if (gated) gated.style.display = '';
+  if (calc)  calc.style.display  = '';
+  if (wrap)  wrap.innerHTML = '<span style="color:var(--jci-gold);font-size:0.85rem">✓ Toegang verleend</span>';
+}
+
+function unlockSite() {
+  const input = document.getElementById('unlock-code');
+  const msg   = document.getElementById('unlock-msg');
+  if (!input) return;
+  const val = input.value.trim();
+  if (val === 'jci2026') {
+    sessionStorage.setItem('jci_unlocked', '1');
+    applyUnlock();
+  } else {
+    if (msg) {
+      msg.textContent = 'Onjuiste code';
+      setTimeout(() => { msg.textContent = ''; }, 2500);
+    }
+    input.classList.add('shake');
+    setTimeout(() => input.classList.remove('shake'), 500);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   renderTeams();
@@ -1134,4 +1164,6 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLivePrices();
   initExtraCosts();
   setTimeout(initReveal, 100);
+  // Restore unlock state across page reloads
+  if (sessionStorage.getItem('jci_unlocked') === '1') applyUnlock();
 });

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JCI Regatta 2026</title>
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/style.css?v=15">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
         <li><a href="#videos">Inspiratie</a></li>
         <li><a href="#route">Route</a></li>
         <li><a href="#boten">Boten</a></li>
-        <li><a href="#calculator">Kosten</a></li>
+        <li><a href="#kosten-overview">Kosten</a></li>
         <li><a href="#vluchten">Vluchten</a></li>
         <li><a href="#aanmelden" class="nav-cta">Aanmelden</a></li>
       </ul>
@@ -230,8 +230,50 @@
     </div>
   </section>
 
-  <!-- BOTEN SELECTOR -->
-  <section id="boten" class="section">
+  <!-- BOTEN WRAPPER (anchor for nav) -->
+  <div id="boten">
+
+  <!-- BOTEN TEASER (publiek zichtbaar) -->
+  <section id="boten-public" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">De boten</span>
+        <h2>Jouw Bavaria 46 op de Adriatische Zee</h2>
+        <p>We zeilen op prachtige Bavaria 46 jachten — ruim, snel en comfortabel. Huur je boot, stel je crew samen en koers richting de Dalmatische eilanden.</p>
+      </div>
+
+      <!-- YouTube video -->
+      <div class="teaser-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/HrhOYrp1ODw?rel=0&modestbranding=1"
+          title="JCI Sailing Week – sfeerimpressie"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Boat photo grid -->
+      <div class="boten-photo-grid">
+        <div class="bp-item"><img src="images/nala.png" alt="Bavaria 46 – Nala"></div>
+        <div class="bp-item"><img src="images/pleiades.png" alt="Bavaria Cruiser 46 – Pleiades"></div>
+        <div class="bp-item"><img src="images/tulipa.png" alt="Bavaria C46 – Tulipa"></div>
+        <div class="bp-item"><img src="images/mudra.png" alt="Bavaria 46 BT – Mudra"></div>
+      </div>
+
+      <!-- Unlock hint -->
+      <div class="teaser-unlock-hint">
+        <span class="tuh-icon">🔒</span>
+        <div>
+          <strong>Volledige bootselectie voor aangemelde leden</strong>
+          <p>Heb je een code ontvangen? Voer hem in onderaan de pagina om alle boten te zien, te vergelijken en direct te selecteren.</p>
+        </div>
+        <a href="#aanmelden" class="btn btn-primary btn-sm">Aanmelden</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTEN GATED (zichtbaar na code) -->
+  <section id="boten-gated" class="section" style="display:none">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Booten kiezen</span>
@@ -324,8 +366,69 @@
     </div>
   </section>
 
-  <!-- PRIJS CALCULATOR -->
-  <section id="calculator" class="section section-dark">
+  </div><!-- /end #boten wrapper -->
+
+  <!-- KOSTEN OVERZICHT (altijd publiek zichtbaar) -->
+  <section id="kosten-overview" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kosten</span>
+        <h2>Wat kost het?</h2>
+        <p>Een indicatief overzicht van de kosten per persoon. De uiteindelijke prijs hangt af van je bootchoice en het aantal personen aan boord.</p>
+      </div>
+
+      <div class="kos-table">
+        <div class="kos-row">
+          <div class="kos-icon">⛵</div>
+          <div class="kos-label">
+            <strong>Bootverhuur</strong>
+            <span>Per persoon, op basis van 8 personen</span>
+          </div>
+          <div class="kos-value">€475 – €940</div>
+        </div>
+        <div class="kos-row">
+          <div class="kos-icon">✈️</div>
+          <div class="kos-label">
+            <strong>Retourvlucht AMS → ZAD</strong>
+            <span>Amsterdam naar Zadar, 29 aug – 5 sep</span>
+          </div>
+          <div class="kos-value">€119 – €419</div>
+        </div>
+        <div class="kos-row">
+          <div class="kos-icon">🍽️</div>
+          <div class="kos-label">
+            <strong>Eten &amp; drinken</strong>
+            <span>Eigen inschatting, ca. €70/dag × 7 dagen</span>
+          </div>
+          <div class="kos-value">€280 – €700</div>
+        </div>
+        <div class="kos-row">
+          <div class="kos-icon">⚓</div>
+          <div class="kos-label">
+            <strong>APA — haven, brandstof &amp; overig</strong>
+            <span>Havengeld, diesel, schoonmaak, linnen</span>
+          </div>
+          <div class="kos-value">€50 – €100</div>
+        </div>
+        <div class="kos-row kos-row-total">
+          <div class="kos-icon">💰</div>
+          <div class="kos-label">
+            <strong>Totaal geschat per persoon</strong>
+            <span>Exclusief dranken buitenboord &amp; souvenirs</span>
+          </div>
+          <div class="kos-value kos-total">€924 – €2.159</div>
+        </div>
+      </div>
+
+      <div class="kos-note">
+        <span>&#9432;</span> Wil je een exacte berekening op basis van jouw boot, groepsgrootte en vluchtkeuze?
+        Vraag een code aan via <a href="#aanmelden">het aanmeldformulier</a> en gebruik de interactieve rekenmachine.
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIJS CALCULATOR (gated) -->
+  <section id="calculator" class="section section-dark" style="display:none">
     <div class="container">
       <div class="section-header light">
         <span class="section-tag">Kosten</span>
@@ -608,7 +711,7 @@
           <a href="#waarom">Waarom</a>
           <a href="#teams">Teams</a>
           <a href="#boten">Boten</a>
-          <a href="#calculator">Kosten</a>
+          <a href="#kosten-overview">Kosten</a>
           <a href="#vluchten">Vluchten</a>
           <a href="#aanmelden">Aanmelden</a>
         </div>
@@ -621,11 +724,17 @@
       <div class="footer-bottom">
         <p>&copy; 2026 JCI Nederland Regatta 2026. Alle rechten voorbehouden.</p>
         <p>Prijzen zijn indicatief en onder voorbehoud van beschikbaarheid.</p>
+        <div class="unlock-wrap" id="unlock-wrap">
+          <span class="lock-icon">🔒</span>
+          <input type="password" id="unlock-code" placeholder="Code invoeren…" maxlength="10" onkeydown="if(event.key==='Enter')unlockSite()">
+          <button id="unlock-btn" onclick="unlockSite()">→</button>
+          <span class="unlock-msg" id="unlock-msg"></span>
+        </div>
       </div>
     </div>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/main.js?v=14"></script>
+  <script src="js/main.js?v=15"></script>
 </body>
 </html>
