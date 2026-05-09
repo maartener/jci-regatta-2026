@@ -2427,9 +2427,26 @@ footer {
   margin-top: 8px;
 }
 .tuh-icon { font-size: 2rem; flex-shrink: 0; }
-.teaser-unlock-hint > div { flex: 1; }
-.teaser-unlock-hint > div strong { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: 4px; }
-.teaser-unlock-hint > div p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+.tuh-body { flex: 1; }
+.tuh-body strong { display: block; font-size: 1.05rem; color: var(--text); margin-bottom: 4px; }
+.tuh-inline-unlock {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.tuh-inline-unlock input {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  width: 160px;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.tuh-inline-unlock input:focus { border-color: var(--jci-blue); }
+.unlock-msg { font-size: 0.82rem; color: #e74c3c; }
 
 /* ════════════════════════════════════════
    KOSTEN OVERZICHT

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JCI Regatta 2026</title>
-  <link rel="stylesheet" href="css/style.css?v=19">
+  <link rel="stylesheet" href="css/style.css?v=20">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,7 +27,6 @@
         <li><a href="#boten">Boten</a></li>
         <li><a href="#kosten-overview">Kosten</a></li>
         <li><a href="#vluchten">Vluchten</a></li>
-        <li><a href="#aanmelden" class="nav-cta">Aanmelden</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
         <span></span><span></span><span></span>
@@ -47,7 +46,7 @@
       <p class="hero-desc">Een onvergetelijke week langs de Dalmatische eilanden. Zon op je gezicht, zout in je haar en een bootcrew die vrienden worden voor het leven. JCI Regatta 2026 — dit wil je niet missen.</p>
       <div class="hero-actions">
         <a href="#boten" class="btn btn-primary">Bekijk de boten</a>
-        <a href="#aanmelden" class="btn btn-outline">Direct aanmelden</a>
+        <a href="#vluchten" class="btn btn-outline">Vluchten bekijken</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">4</span><span class="stat-label">Aanmeldingen nu</span></div>
@@ -311,11 +310,16 @@
       <!-- Unlock hint -->
       <div class="teaser-unlock-hint">
         <span class="tuh-icon">🔒</span>
-        <div>
-          <strong>Volledige bootselectie voor aangemelde leden</strong>
-          <p>Heb je een code ontvangen? Voer hem in onderaan de pagina om alle boten te zien, te vergelijken en direct te selecteren.</p>
+        <div class="tuh-body">
+          <strong>Bootselectie voor deelnemers</strong>
+          <div class="tuh-inline-unlock" id="tuh-inline-unlock" style="display:none">
+            <input type="password" id="tuh-code" placeholder="Wachtwoord…" maxlength="10"
+              onkeydown="if(event.key==='Enter')unlockSite()">
+            <button onclick="unlockSite()" class="btn btn-primary btn-sm">→</button>
+            <span class="unlock-msg" id="unlock-msg"></span>
+          </div>
         </div>
-        <a href="#aanmelden" class="btn btn-primary btn-sm">Aanmelden</a>
+        <button id="tuh-toggle-btn" onclick="toggleUnlockInput()" class="btn btn-sm btn-outline">🔓 Inloggen</button>
       </div>
     </div>
   </section>
@@ -537,130 +541,6 @@
   </section>
 
   <!-- AANMELDEN -->
-  <section id="aanmelden" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Aanmelden</span>
-        <h2>Doe mee!</h2>
-        <p>Geef je interesse door via het formulier. We nemen contact op met meer informatie en de definitieve bootindeling.</p>
-      </div>
-
-      <div class="signup-layout">
-        <form class="signup-form" id="signup-form" onsubmit="return handleFormSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-name">Voornaam *</label>
-              <input type="text" id="f-name" name="name" required placeholder="Jan">
-            </div>
-            <div class="form-group">
-              <label for="f-lastname">Achternaam *</label>
-              <input type="text" id="f-lastname" name="lastname" required placeholder="de Vries">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-email">E-mailadres *</label>
-              <input type="email" id="f-email" name="email" required placeholder="jan@email.com">
-            </div>
-            <div class="form-group">
-              <label for="f-phone">Telefoonnummer</label>
-              <input type="tel" id="f-phone" name="phone" placeholder="+31 6 12345678">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="f-boat">Voorkeur boot</label>
-            <select id="f-boat" name="boat">
-              <option value="">-- Nog geen voorkeur --</option>
-              <!-- Filled by JS -->
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f-experience">Zeilerervaring</label>
-            <select id="f-experience" name="experience">
-              <option value="none">Geen ervaring (schipper aanwezig)</option>
-              <option value="beginner">Beginner (een paar keer gezeild)</option>
-              <option value="intermediate">Gevorderd (regelmatig zeilen)</option>
-              <option value="skipper">Schipper (brevet aanwezig)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f-message">Opmerkingen / vragen</label>
-            <textarea id="f-message" name="message" rows="3" placeholder="Bijv. dieetwensen, of je wil bijslapen op de boot..."></textarea>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" id="f-whatsapp" name="whatsapp" value="yes">
-            <label for="f-whatsapp">Voeg me toe aan de WhatsApp-groep voor updates</label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Stuur mijn aanmelding</button>
-          <p class="form-disclaimer">* Verplichte velden. Je gegevens worden alleen gebruikt voor de organisatie van de JCI Regatta 2026 en niet gedeeld met derden.</p>
-        </form>
-
-        <div class="signup-side">
-          <div class="signup-contact">
-            <h4>Vragen?</h4>
-            <p>Neem direct contact op met de organisatie.</p>
-            <div class="contact-items">
-              <div class="contact-item">
-                <span class="contact-icon">&#128140;</span>
-                <span>sailing@jci.nl</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">&#128241;</span>
-                <span>+31 6 00 000 000</span>
-              </div>
-            </div>
-            <a href="https://wa.me/31600000000?text=Hoi!%20Ik%20heb%20interesse%20in%20de%20JCI%20Sailing%20Week%202026" target="_blank" rel="noopener" class="btn btn-whatsapp">
-              WhatsApp ons
-            </a>
-          </div>
-
-          <div class="signup-timeline">
-            <h4>Tijdlijn</h4>
-            <div class="timeline">
-              <div class="tl-item">
-                <div class="tl-dot active"></div>
-                <div class="tl-content">
-                  <strong>Nu open</strong>
-                  <span>Interesse opgeven</span>
-                </div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-content">
-                  <strong>1 april 2026</strong>
-                  <span>Definitieve aanmelding + aanbetaling</span>
-                </div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-content">
-                  <strong>1 juni 2026</strong>
-                  <span>Bootindeling bekend + restbetaling</span>
-                </div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-content">
-                  <strong>29 aug 2026</strong>
-                  <span>Vertrek &mdash; welkom in Zadar!</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUCCESS MODAL -->
-  <div id="success-modal" class="modal-overlay" style="display:none">
-    <div class="modal-box">
-      <div class="modal-icon">&#127881;</div>
-      <h3>Aanmelding ontvangen!</h3>
-      <p>Bedankt voor je aanmelding. We nemen zo snel mogelijk contact met je op met meer informatie over de JCI Regatta 2026.</p>
-      <button onclick="closeModal()" class="btn btn-primary">Sluiten</button>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -678,7 +558,7 @@
           <a href="#boten">Boten</a>
           <a href="#kosten-overview">Kosten</a>
           <a href="#vluchten">Vluchten</a>
-          <a href="#aanmelden">Aanmelden</a>
+          <a href="#vluchten">Vluchten</a>
         </div>
         <div class="footer-info">
           <p>29 aug &ndash; 5 sep 2026</p>
@@ -689,17 +569,12 @@
       <div class="footer-bottom">
         <p>&copy; 2026 JCI Nederland Regatta 2026. Alle rechten voorbehouden.</p>
         <p>Prijzen zijn indicatief en onder voorbehoud van beschikbaarheid.</p>
-        <div class="unlock-wrap" id="unlock-wrap">
-          <span class="lock-icon">🔒</span>
-          <input type="password" id="unlock-code" placeholder="Code invoeren…" maxlength="10" onkeydown="if(event.key==='Enter')unlockSite()">
-          <button id="unlock-btn" onclick="unlockSite()">→</button>
-          <span class="unlock-msg" id="unlock-msg"></span>
-        </div>
+        <div id="unlock-wrap"></div>
       </div>
     </div>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/main.js?v=18"></script>
+  <script src="js/main.js?v=20"></script>
 </body>
 </html>

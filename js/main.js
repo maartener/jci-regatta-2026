@@ -1130,17 +1130,29 @@ function applyUnlock() {
   if (wrap)  wrap.innerHTML = '<span style="color:var(--jci-gold);font-size:0.85rem">✓ Toegang verleend</span>';
 }
 
+function toggleUnlockInput() {
+  const wrap = document.getElementById('tuh-inline-unlock');
+  const btn  = document.getElementById('tuh-toggle-btn');
+  if (!wrap) return;
+  const visible = wrap.style.display !== 'none';
+  wrap.style.display = visible ? 'none' : 'flex';
+  if (!visible) {
+    btn.style.display = 'none';
+    document.getElementById('tuh-code').focus();
+  }
+}
+
 function unlockSite() {
-  const input = document.getElementById('unlock-code');
+  const input = document.getElementById('tuh-code');
   const msg   = document.getElementById('unlock-msg');
   if (!input) return;
   const val = input.value.trim();
-  if (val === 'jci2026') {
+  if (val === '1234') {
     sessionStorage.setItem('jci_unlocked', '1');
     applyUnlock();
   } else {
     if (msg) {
-      msg.textContent = 'Onjuiste code';
+      msg.textContent = 'Onjuist wachtwoord';
       setTimeout(() => { msg.textContent = ''; }, 2500);
     }
     input.classList.add('shake');
