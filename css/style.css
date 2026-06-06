@@ -2358,6 +2358,33 @@ footer {
 .calc-back-btn { display: none; }
 
 /* ════════════════════════════════════════
+   BOOT SPECS BAR
+   ════════════════════════════════════════ */
+.boat-specs-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.bspec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  min-width: 110px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.bspec-icon { font-size: 1.5rem; }
+.bspec strong { font-size: 1rem; font-weight: 700; color: var(--jci-blue); }
+.bspec span:last-child { font-size: 0.75rem; color: var(--text-muted); }
+
+/* ════════════════════════════════════════
    BOTEN TEASER (publiek)
    ════════════════════════════════════════ */
 .teaser-video-wrap {
