@@ -2385,6 +2385,37 @@ footer {
 .bspec span:last-child { font-size: 0.75rem; color: var(--text-muted); }
 
 /* ════════════════════════════════════════
+   MEER DAN ZEILEN
+   ════════════════════════════════════════ */
+.meer-dan-zeilen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.mdz-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.mdz-icon { font-size: 2rem; flex-shrink: 0; }
+.mdz-item strong { display: block; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.mdz-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.55; }
+
+.video-disclaimer {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+/* ════════════════════════════════════════
    BOTEN TEASER (publiek)
    ════════════════════════════════════════ */
 .teaser-video-wrap {
@@ -2714,6 +2745,9 @@ footer {
 
   /* ── Unlock widget ── */
   .unlock-wrap { justify-content: center; }
+
+  /* ── Meer dan zeilen ── */
+  .meer-dan-zeilen { grid-template-columns: 1fr; }
 
   /* ── Calculator CTA ── */
   .calc-cta-block { flex-direction: column; text-align: center; gap: 16px; padding: 20px; }
