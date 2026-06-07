@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JCI Regatta 2026</title>
-  <link rel="stylesheet" href="css/style.css?v=27">
+  <link rel="stylesheet" href="css/style.css?v=28">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -305,22 +305,33 @@
 
       <!-- Boat photos -->
       <div class="boten-photo-grid">
-        <div class="bp-item">
+        <div class="bp-item bp-zoomable" onclick="openLightbox('images/Oceanis 48.jpg','Oceanis 48 — Exterieur')">
           <img src="images/Oceanis 48.jpg" alt="Bénéteau Oceanis 48 exterieur">
           <div class="bp-label"><span class="bp-name">Oceanis 48</span><span class="bp-model">Exterieur</span></div>
+          <div class="bp-zoom-hint">🔍</div>
         </div>
-        <div class="bp-item">
+        <div class="bp-item bp-zoomable" onclick="openLightbox('images/Oceanis 48-2.jpg','Oceanis 48 — Haven')">
           <img src="images/Oceanis 48-2.jpg" alt="Bénéteau Oceanis 48 aan de steiger">
           <div class="bp-label"><span class="bp-name">Oceanis 48</span><span class="bp-model">Haven</span></div>
+          <div class="bp-zoom-hint">🔍</div>
         </div>
-        <div class="bp-item">
+        <div class="bp-item bp-zoomable" onclick="openLightbox('images/oceanis_48_interior7.avif','Oceanis 48 — Interieur')">
           <img src="images/oceanis_48_interior7.avif" alt="Bénéteau Oceanis 48 interieur">
           <div class="bp-label"><span class="bp-name">Oceanis 48</span><span class="bp-model">Interieur</span></div>
+          <div class="bp-zoom-hint">🔍</div>
         </div>
-        <div class="bp-item">
+        <div class="bp-item bp-zoomable" onclick="openLightbox('images/Oceanis 48 - map.png','Oceanis 48 — Indeling')">
           <img src="images/Oceanis 48 - map.png" alt="Bénéteau Oceanis 48 plattegrond">
           <div class="bp-label"><span class="bp-name">Oceanis 48</span><span class="bp-model">Indeling</span></div>
+          <div class="bp-zoom-hint">🔍</div>
         </div>
+      </div>
+
+      <!-- LIGHTBOX -->
+      <div id="lightbox" onclick="closeLightbox()">
+        <button class="lb-close" onclick="closeLightbox()">✕</button>
+        <img id="lb-img" src="" alt="">
+        <p id="lb-caption"></p>
       </div>
 
       <!-- Unlock hint -->
@@ -584,6 +595,6 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/main.js?v=27"></script>
+  <script src="js/main.js?v=28"></script>
 </body>
 </html>

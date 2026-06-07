@@ -1119,6 +1119,26 @@ function loadLivePrices() {
     });
 }
 
+// ── LIGHTBOX ─────────────────────────────────
+function openLightbox(src, caption) {
+  const lb  = document.getElementById('lightbox');
+  const img = document.getElementById('lb-img');
+  const cap = document.getElementById('lb-caption');
+  if (!lb) return;
+  img.src = src;
+  img.alt = caption;
+  if (cap) cap.textContent = caption;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
 // ── INIT ─────────────────────────────────────
 // ── UNLOCK / CODE GATE ───────────────────────
 function applyUnlock() {
