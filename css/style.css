@@ -2387,38 +2387,49 @@ footer {
 /* ════════════════════════════════════════
    MEER DAN ZEILEN
    ════════════════════════════════════════ */
-.meer-dan-zeilen-header {
-  text-align: center;
-  margin-bottom: 28px;
-}
-.mdz-main-icon { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-.meer-dan-zeilen-header h3 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
-.meer-dan-zeilen-header p { font-size: 0.95rem; color: var(--text-muted); max-width: 680px; margin: 0 auto; line-height: 1.65; }
+.mdz-section { background: var(--dark); }
+.mdz-section .section-header h2 { color: #fff; }
+.mdz-section .section-header p   { color: rgba(255,255,255,0.72); }
+.mdz-section .section-tag { background: rgba(255,215,0,0.15); color: var(--jci-gold); }
 
-.meer-dan-zeilen {
+.mdz-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin-bottom: 48px;
 }
-.mdz-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  background: var(--bg-white);
-  border: 1.5px solid var(--border);
+.mdz-card {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  border-top: 4px solid var(--mdz-color);
   border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
-.mdz-item-wide {
-  grid-column: 1 / -1;
-  background: var(--bg-light);
-  border-color: var(--jci-gold);
+.mdz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
 }
-.mdz-icon { font-size: 2rem; flex-shrink: 0; }
-.mdz-item strong { display: block; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-.mdz-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.55; }
+.mdz-card-anchor {
+  background: rgba(255,215,0,0.08);
+  border-color: rgba(255,215,0,0.2);
+}
+.mdz-card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+.mdz-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.mdz-card p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+  margin: 0;
+}
 
 .video-disclaimer {
   text-align: center;
@@ -2760,7 +2771,7 @@ footer {
   .unlock-wrap { justify-content: center; }
 
   /* ── Meer dan zeilen ── */
-  .meer-dan-zeilen { grid-template-columns: 1fr; }
+  .mdz-grid { grid-template-columns: 1fr; }
 
   /* ── Calculator CTA ── */
   .calc-cta-block { flex-direction: column; text-align: center; gap: 16px; padding: 20px; }
