@@ -2387,6 +2387,14 @@ footer {
 /* ════════════════════════════════════════
    MEER DAN ZEILEN
    ════════════════════════════════════════ */
+.meer-dan-zeilen-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.mdz-main-icon { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+.meer-dan-zeilen-header h3 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+.meer-dan-zeilen-header p { font-size: 0.95rem; color: var(--text-muted); max-width: 680px; margin: 0 auto; line-height: 1.65; }
+
 .meer-dan-zeilen {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2402,6 +2410,11 @@ footer {
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
+}
+.mdz-item-wide {
+  grid-column: 1 / -1;
+  background: var(--bg-light);
+  border-color: var(--jci-gold);
 }
 .mdz-icon { font-size: 2rem; flex-shrink: 0; }
 .mdz-item strong { display: block; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
